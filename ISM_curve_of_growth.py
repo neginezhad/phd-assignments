@@ -117,6 +117,7 @@ if __name__ == '__main__':
     column_density_vals = 10 ** np.arange(12, 17, 0.2, dtype=float)
     plt.subplot(3, 1, 1)
     plot_curve_growth(column_density_vals, osc_strength, wavelength_fe, doppler_b_vals, damping_gamma, approx=is_approx, title='Fe II 2382.8')
+    plt.xlim(12,16)
 
     # Iron (Fe II) transition at 2249.9 Å
     osc_strength  = 0.00182
@@ -127,6 +128,7 @@ if __name__ == '__main__':
 
     plt.subplot(3, 1, 2)
     plot_curve_growth(column_density_vals, osc_strength, wavelength_fe, doppler_b_vals, damping_gamma, approx=is_approx, title='Fe II 2249.9')
+    plt.xlim(12,16)
 
     # Carbon (C II) transition at 1334.5 Å
     osc_strength  = 0.12780
@@ -137,5 +139,7 @@ if __name__ == '__main__':
 
     plt.subplot(3, 1, 3)
     plot_curve_growth(column_density_vals, osc_strength, wavelength_c, doppler_b_vals, damping_gamma, approx=is_approx, title='C II 1334.5')
+    plt.xlim(13,17)
+    plt.ylim(-2,)
 
     plt.savefig('curve_of_growth.png')
